@@ -65,15 +65,22 @@ namespace ConsoleApp1
         }
 
 
-
-
-
-
         static void Main(string[] args)
         {
             NumberGuesser numberGuesser = new NumberGuesser();
 
+            //change the default maximum number to 200
             numberGuesser.MaximumNumber = 200;
+
+            //ask the user to think of a number
+            numberGuesser.InformUser();
+
+            //discover the number the user is thinking of
+            numberGuesser.DiscoverNumber();
+
+            //annouce the result
+            numberGuesser.AnnouceResult();
+
 
             //Fibonnaci(20);
             //for (int i = 0; i < 20; i++)
@@ -90,77 +97,8 @@ namespace ConsoleApp1
 
             Console.ReadKey();
 
-
-            //// Ask user to think of a number between 0 and 100
-            //Console.WriteLine("I want you to think of a number between 0 and 100 ok? ");
-            //Console.ReadLine();
-
-
-
-            ////while the guess isn't the same as the know maximum value untill find the number 
-            //while (guessMin != max)
-            //{
-            //    //increase guess amount
-            //    guesses++;
-
-            //    //ask the user if their number is between the guess range
-            //    Console.WriteLine($"is your number between {guessMin} and {guessMax}?");
-            //    string response = Console.ReadLine();
-
-            //    //if the user confirmed their number is within the current range 
-            //    //bool hasResponse = response != null && response.Length > 0;
-            //    //if (hasResponse && (response[0] == 'y' || response[0] == 'Y'))
-
-            //    if (response?.ToLower().FirstOrDefault() == 'y') //? sprawdza czy nie jest nulem
-            //    {
-            //        //We know the number is between guessFrom and guessTo
-            //        //so set the new maximum number
-            //        max = guessMax;
-
-            //        //change the next quess range to be half of the new maximum range
-            //        guessMax -= (guessMax - guessMin) / 2;
-            //    }
-            //    //the number is greater than guessmax and less than or equal to max
-            //    else
-            //    {
-            //        //the new minimum is one above the old maximum
-            //        guessMin = guessMax + 1;
-
-            //        //guess the bottom half of the new range
-            //        int reminingDifference = max - guessMax;
-
-            //        //set the guess max to half way beteen the guessMin and max
-            //        //note: math.celling will round up the remianing diferenco to 2, if the difference is 3
-            //        guessMax += (int)Math.Ceiling(reminingDifference / 2f);
-            //    }
-
-            //    //if we only have 2 numbers left, quess on of time
-            //    if (guessMin + 1 == max)
-            //    {
-            //        guesses++;
-            //        //ask the user if their number is the lower number
-            //        Console.WriteLine($"Is your number {guessMin}?");
-            //        response = Console.ReadLine();
-            //        //if the user confimed their number is the lower number
-            //        if (response?.ToLower().FirstOrDefault() == 'y')
-            //        {
-            //            break;
-            //        }
-            //        else
-            //        {
-            //            //that means the number must be the higher of the two
-            //            guessMin = max;
-            //            break;
-            //        }
-            //    }
-
-            //}
-
-            ////tell the user their number
-            //Console.WriteLine($"*Your number is { guessMin }*");
-
-            ////let the user know how many guesses it took
-            //Console.WriteLine($"*Guessed in {guesses} guesses*");
+            
+           
 
             Console.ReadKey();
 
