@@ -67,7 +67,7 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            NumberGuesser numberGuesser = new NumberGuesser();
+            var numberGuesser = new NumberGuesser();
 
             //change the default maximum number to 200
             numberGuesser.MaximumNumber = 200;
@@ -90,14 +90,11 @@ namespace ConsoleApp1
 
             //Console.WriteLine(fib(4));
 
-            Sito(10);
+            //Sito(10);
 
             //wypisz wynik
 
-
-            Console.ReadKey();
-
-            
+          
            
 
             Console.ReadKey();
